@@ -13,6 +13,12 @@ class PlatformExceptionAlertDialog extends PlatformAlertDialog {
         );
 
   static String _message(PlatformException exception) {
+    print(exception);
+    if (exception.message == 'FIRFirestoreErrorDomain') {
+      if (exception.code == 'PERMISSION_DENIED') {
+        return 'Falha de permissão';
+      }
+    }
     return _errors[exception.code] ?? exception.message;
   }
 
@@ -26,5 +32,6 @@ class PlatformExceptionAlertDialog extends PlatformAlertDialog {
     // ERROR_USER_DISABLED
     // ERROR_TOO_MANY_REQUESTS
     // ERROR_OPERATION_NOT_ALLOWED
+    // 'PERMISSION_DENIED'
   };
 }

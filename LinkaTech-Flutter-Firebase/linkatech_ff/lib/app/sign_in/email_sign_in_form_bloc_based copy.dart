@@ -1,12 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:linkatech_ff/app/sign_in/email_sign_in_bloc.dart';
 import 'package:linkatech_ff/app/sign_in/email_sign_in_model.dart';
-import 'package:linkatech_ff/app/sign_in/validators.dart';
 import 'package:linkatech_ff/common_widgets/form_submit_button.dart';
-import 'package:linkatech_ff/common_widgets/platform_alert_dialog.dart';
 import 'package:linkatech_ff/common_widgets/platform_exception_alert_dialog.dart';
 import 'package:linkatech_ff/services/auth.dart';
 import 'package:provider/provider.dart';
